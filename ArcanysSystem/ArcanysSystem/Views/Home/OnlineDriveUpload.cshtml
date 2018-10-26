@@ -1,0 +1,83 @@
+﻿@using PagedList.Mvc
+
+@model PagedList.IPagedList<ArcanysSystem.Models.OnlineDriveViewModel>
+<div class="jumbotron">
+    <div class="container-fluid" ng-controller="ctrlGlobal">
+        <div class="container body-content pt-lg-5">
+            <div style="min-height:700px;">
+                <h1>@ViewBag.PageTitle</h1>
+                <h6>@ViewBag.PageSubTitle</h6>
+                <br />
+                @Html.FileUploadPanel("Home", "UploadedFile", new { @class = "dropzone" })
+                <br />
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        @Html.ActionLink("Cancel", "OnlineDriveUpload", new { routeValues = "" }, new { @class = "btn btn-block btn-secondary", @data_toggle = "tooltip", @title = "Cancel" })
+                    </div>
+                    <div class="col-md-6">
+                        @Html.ActionLink("Upload", "OnlineDriveUploadedDocumentSave", new
+                   {
+                       ButtonAction = "Upload"
+                   }, new { @class = "btn btn-block btn-success", @data_toggle = "tooltip", @title = "Upload" })
+                    </div>
+                </div>
+                <br />
+                <form>
+                    <div class="card">
+                        <div class="card-header card-header-style bg-sky">
+                            <h3>@ViewBag.TableTitle<a class="fa fa-list img-thumbnail img-btn btn-success ms-pointer show-loading" href="#"></a></h3>
+                        </div>
+                        <table class="table table-bordered table-striped text-sm-left">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th class="text-center" scope="col" hidden="hidden">@Html.HiddenFor(m => m.FirstOrDefault().Id)</th>
+                                    <th class="text-center" scope="col">@Html.DisplayNameFor(m => m.FirstOrDefault().RowID)</th>
+                                    <th class="text-center" scope="col">@Html.DisplayNameFor(m => m.FirstOrDefault().FileName)</th>
+                                    <th class="text-center" scope="col">@Html.DisplayNameFor(m => m.FirstOrDefault().FilePath)</th>
+                                    <th class="text-center" scope="col">@Html.DisplayNameFor(m => m.FirstOrDefault().UploadedOn)</th>
+                                    <th class="text-center" scope="col">
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="small">
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td hidden="hidden">@item.Id</td>
+                                        <td>@item.RowID</td>
+                                        <td>@item.FileName</td>
+                                        <td>@item.FilePath</td>
+                                        <td>@item.UploadedOn</td>
+                                        <td class="text-center">
+                                            @Html.ActionLink(" ", "OnlineDriveUploadedDocumentDelete", new
+                                       {
+                                           id = @item.Id
+                                       }, new { @class = "fa fa-trash img-thumbnail img-btn btn-outline-danger ms-pointer show-loading", @onclick = string.Format(@"return confirm('Are you sure you\'d like to delete this document id \'\'{0}\'\'');", @item.RowID), @data_toggle = "tooltip", @title = "Delete" })
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <div class="card-body bg-dark"></div>
+                        <div class="card-footer bg-primary text-center">
+                            @Html.PagedListPager(Model, page => Url.Action("OnlineDriveUpload", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }), new PagedListRenderOptions
+                       {
+                           LiElementClasses = new string[] { "page-item page-link border-dark" },
+                           UlElementClasses = new string[] { "pagination justify-content-center border-dark" },
+                           ClassToApplyToFirstListItemInPager = "page-item page-link border-dark",
+                           ClassToApplyToLastListItemInPager = "page-item page-link border-dark",
+                           DisplayLinkToFirstPage = PagedListDisplayMode.Always,
+                           DisplayLinkToLastPage = PagedListDisplayMode.Always,
+                           LinkToPreviousPageFormat = "Previous",
+                           LinkToNextPageFormat = "Next",
+                           Display = PagedListDisplayMode.Always,
+                           DisplayEllipsesWhenNotShowingAllPageNumbers = true,
+                           MaximumPageNumbersToDisplay = 5
+                       })
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

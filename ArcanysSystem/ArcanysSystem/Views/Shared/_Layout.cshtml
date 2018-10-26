@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html ng-app="appDocs">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/jqueryui")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/dragndropcss")
+</head>
+<body ng-controller="ctrlGlobal">
+    <div id="wrapper">
+        <nav class="navbar navbar-expand-sm navbar-dark fixed-top nav-fixed-top-padding bg-black">
+            <div class="input-group" id="nav-admin">
+                <div class="input-group-btn">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <img class="img-logo nav" src="~/Resources/Images/Png/arcanys-logo-square-indigo.png" alt="arcanys-logo" />
+                @Html.ActionLink("{{ApplicationTitle}}", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <div class="navbar-collapse collapse">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item">@Html.ActionLink("{{btnAPI}}", "Index", "Help", new { area = "" }, new { @class = "nav-link" })</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar-expand-sm navbar-dark" id="awesome-admin">
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav navbar-sidenav" id="tabAccordion">
+                        <li class="nav-item" id="user-profile-nav" data-toggle="tooltip" data-placement="right" title="/">
+                            @using (Html.BeginForm(null, null, FormMethod.Post, new { id = "updateProfilePicture", enctype = "multipart/form-data" }))
+                            {
+                                <a class="nav-link" href="/Home/OnlineDriveUpload">
+                                    <div class="profile-pic img-responsive" style="background-image: url('/Resources/Images/png/arcanys-online-drive.png') !important">
+                                    </div>
+                                </a>
+                            }
+                        </li>
+                        @foreach (var menu in ViewBag.NavigationLink)
+                        {
+                            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="@menu.PageURL">
+                                @if (menu.PageURL.ToString().Trim() != "#")
+                                {
+                                    <a class="nav-link" href="@Url.Content(menu.PageURL)">
+                                        <i class="fa fa-fw @menu.PageIcon"></i>
+                                        <span class="nav-link-text">@menu.PageName</span>
+                                    </a>
+                                }
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="content-wrapper filter-div-wrapper " style="background-image: url('../../../../Resources/Images/Png/arcanys-cosmo-universe.png');background-size:cover;background-position:center;">
+            <div class="container-fluid filter-div-padding ">
+                @RenderBody()
+                <footer class="text-center">
+                    <p>&copy; @DateTime.Now.Year - {{CompanyName}} {{ApplicationTitle}}</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/dragndropscripts")
+    @Scripts.Render("~/bundles/angularjs")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

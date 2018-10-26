@@ -1,0 +1,81 @@
+﻿body {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+}
+
+input,
+select,
+textarea {
+    max-width: 100%;
+}
+
+.nav-fixed-top-padding {
+    padding: .50rem;
+}
+
+h1,
+.h1 {
+    font-size: 36px;
+    font-family: 'Segoe UI Black' ;
+    font-weight: bolder;
+}
+
+.img-logo {
+    padding-top: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: block;
+    height: 40px;
+    width: 110px;
+}
+
+.img-btn {
+    height: 24px;
+    width: 24px;
+    padding: 5px;
+    line-height: 1;
+}
+
+#online-drive-png {
+    padding-left: 300px;
+    padding-right: 300px;
+    width: 100%;
+}
+
+#drive-maintenance {
+    padding-left: 200px;
+    padding-right: 200px;
+    width: 100%;
+}
+
+.bg-sky {
+    background-color: #007bff !important; 
+}
+
+.bg-black {
+    background-color: #212529 
+}
+
+.card-header-style {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+.nav-boarder-black {
+    border-right: 5px solid #212529;
+    margin-right: 10px;
+}
+
+.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .nav-link.active {
+    color: #28a745 !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
+    color: #007bff !important;
+}

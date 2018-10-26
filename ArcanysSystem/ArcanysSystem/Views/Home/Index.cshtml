@@ -1,0 +1,14 @@
+﻿<div class="jumbotron">
+    <div style="min-height:700px">
+        <div ng-controller="ctrlIndex">
+            <img id="online-drive-png" src="~/Resources/Images/Png/arcanys-online-application.png" alt="microsoft-logo" />
+            <div class="container">
+                <h1>{{ApplicationNameAcronym}}</h1>
+                <div class="well">
+                    <p>{{MERASDescription}}</p>
+                    <p>@Html.ActionLink("{{BtnStart}}", "OnlineDriveUpload", "Home", new { routeValues = "" }, new { @class = "btn btn-primary btn-lg" })</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
