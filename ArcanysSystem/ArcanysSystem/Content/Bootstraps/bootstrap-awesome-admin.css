@@ -369,7 +369,7 @@ body.sidenav-toggled .navbar-sidenav-tooltip.show {
 
 #awesome-admin.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item > .nav-link {
     text-shadow: 1px 1px 0px #6600ff, 0 0 1em #6600ff, 0 0 0.9em #6600ff;
-    color: #d9d9d9 /*#212529*/ !important;
+    color: #d9d9d9 !important;
 }
 
     #awesome-admin.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item > .nav-link:hover {
