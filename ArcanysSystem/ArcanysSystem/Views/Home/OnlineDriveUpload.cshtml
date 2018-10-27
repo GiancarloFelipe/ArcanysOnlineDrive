@@ -4,7 +4,7 @@
 <div class="jumbotron">
     <div class="container-fluid" ng-controller="ctrlGlobal">
         <div class="container body-content pt-lg-5">
-            <div style="min-height:700px;">
+            <div class="container-size">
                 <h1>@ViewBag.PageTitle</h1>
                 <h6>@ViewBag.PageSubTitle</h6>
                 <br />
@@ -12,7 +12,7 @@
                 <br />
                 <div class="form-group row">
                     <div class="col-md-6">
-                        @Html.ActionLink("Cancel", "OnlineDriveUpload", new { routeValues = "" }, new { @class = "btn btn-block btn-secondary", @data_toggle = "tooltip", @title = "Cancel" })
+                        @Html.ActionLink("Reset", "OnlineDriveUpload", new { routeValues = "" }, new { @class = "btn btn-block btn-secondary", @data_toggle = "tooltip", @title = "Cancel" })
                     </div>
                     <div class="col-md-6">
                         @Html.ActionLink("Upload", "OnlineDriveUploadedDocumentSave", new
@@ -25,7 +25,7 @@
                 <form>
                     <div class="card">
                         <div class="card-header card-header-style bg-sky">
-                            <h3>@ViewBag.TableTitle<a class="fa fa-list img-thumbnail img-btn btn-success ms-pointer show-loading" href="#"></a></h3>
+                            <h3>@ViewBag.TableTitle<a class="fa fa-list img-thumbnail img-btn btn-success" href="#"></a></h3>
                         </div>
                         <table class="table table-bordered table-striped text-sm-left">
                             <thead class="thead-dark">
@@ -52,7 +52,7 @@
                                             @Html.ActionLink(" ", "OnlineDriveUploadedDocumentDelete", new
                                        {
                                            id = @item.Id
-                                       }, new { @class = "fa fa-trash img-thumbnail img-btn btn-outline-danger ms-pointer show-loading", @onclick = string.Format(@"return confirm('Are you sure you\'d like to delete this document id \'\'{0}\'\'');", @item.RowID), @data_toggle = "tooltip", @title = "Delete" })
+                                       }, new { @class = "fa fa-trash img-thumbnail img-btn btn-outline-danger", @onclick = string.Format(@"return confirm('Are you sure you\'d like to delete this document id \'\'{0}\'\'');", @item.RowID), @data_toggle = "tooltip", @title = "Delete" })
                                         </td>
                                     </tr>
                                 }

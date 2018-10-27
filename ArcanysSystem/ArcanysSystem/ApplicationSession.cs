@@ -25,7 +25,7 @@ namespace ArcanysSystem
                 get { return _ownerId = Convert.ToInt32(System.Web.HttpContext.Current.Session["OwnerId"]); }
                 set { System.Web.HttpContext.Current.Session["OwnerId"] = _ownerId = value; }
             }
-                       
+
             private static string _uploadedFileNameGUID;
             /// <summary>
             /// Gets or sets the file name of the uploaded file.

@@ -62,4 +62,7 @@
     <Build Include="Menus.sql" />
     <Build Include="OnlineDrive.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="InsertMenusScript.sql" />
+  </ItemGroup>
 </Project>

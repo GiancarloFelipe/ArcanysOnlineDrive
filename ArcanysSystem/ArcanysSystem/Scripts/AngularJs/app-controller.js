@@ -3,8 +3,11 @@
 
     $scope.CompanyName = "Arcanys";
     $scope.ApplicationTitle = "Online Drive";
-    $scope.ApplicationNameAcronym = "Arcanys Online Drive Sysytem";
     $scope.ApplicationName = "Online Application";
-    $scope.btnAPI = "API";
+    $scope.ImgArcanysLogoPng = "arcanys-logo-square-indigo.png";
+    $scope.ImgUrlOnlineDrive = "/Resources/Images/png/arcanys-online-drive.png";
+    $scope.ImgAltArcanysLogo = "arcanys-logo";
+    $scope.HrefProfilePic = "/Home/OnlineDriveUpload";
+    $scope.BtnAPI = "API";
 
 });

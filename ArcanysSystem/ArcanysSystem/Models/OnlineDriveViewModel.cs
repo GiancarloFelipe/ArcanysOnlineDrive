@@ -33,7 +33,7 @@ namespace ArcanysSystem.Models
         /// <summary>
         /// Gets or Sets the row id of the uploaded file.
         /// </summary>
-        [Display(Name ="Id")]
+        [Display(Name = "Id")]
         public int RowID { get; set; }
         /// <summary>
         /// Gets or Sets the id for the uploaded file.

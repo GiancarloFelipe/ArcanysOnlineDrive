@@ -32,10 +32,10 @@ namespace ArcanysSystem.Controllers
 
             // Set the total of files stored on the online drive...
             int totalFiles = GetOnlineDrive().Count();
-            if (totalFiles <= 1)   
-                ViewBag.TotalUploadedFile = String.Format("{0} {1}", totalFiles, "Total File on the Drive!");     
-            else        
-                ViewBag.TotalUploadedFile = String.Format("{0} {1}", totalFiles, "Total Files on the Drive!");          
+            if (totalFiles <= 1)
+                ViewBag.TotalUploadedFile = String.Format("{0} {1}", totalFiles, "Total File on the Drive!");
+            else
+                ViewBag.TotalUploadedFile = String.Format("{0} {1}", totalFiles, "Total Files on the Drive!");
 
             // Render the view as response to the request...
             return View();

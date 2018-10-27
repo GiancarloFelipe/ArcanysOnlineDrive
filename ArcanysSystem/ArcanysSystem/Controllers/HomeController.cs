@@ -52,7 +52,7 @@ namespace ArcanysSystem.Controllers
             // Set the view captions for this action method...
             ViewBag.Title = "Online Drive File Uploading Page";
             ViewBag.PageTitle = "Upload Your Files Here...";
-            ViewBag.PageSubTitle = "Simply drag en drop any files the you'd like to upload.";
+            ViewBag.PageSubTitle = "Simply drag en drop any files that you'd like to upload.";
             ViewBag.TableTitle = "Uploaded File List";
 
             // Reset all the uploaded file list first...

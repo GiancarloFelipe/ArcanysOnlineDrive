@@ -22,12 +22,6 @@
     text-decoration: none;
 }
 
-.profile-div {
-    padding: 20px 35px 20px 35px !important;
-    vertical-align: middle;
-    text-align: center;
-}
-
 .dropdown-menu {
     position: absolute;
     top: 100%;

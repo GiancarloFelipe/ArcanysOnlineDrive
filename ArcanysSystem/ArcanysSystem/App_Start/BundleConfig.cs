@@ -19,14 +19,13 @@ namespace ArcanysSystem
                     "~/Scripts/modernizr-*"));
 
             // Set the script bundle for bootstrap scripts...
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(                    
+            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                     "~/Scripts/bootstrap.js"));
 
             // Set the style bundle for all css...
             bundles.Add(new StyleBundle("~/Content/css").Include(
                     "~/Content/font-awesome.css",
                     "~/Content/bootstrap.css",
-                    "~/Content/Bootstraps/bootstrap-awesome-login.css",
                     "~/Content/Bootstraps/bootstrap-awesome-admin.css",
                     "~/Content/Bootstraps/bootstrap-awesome-site.css"));
 
