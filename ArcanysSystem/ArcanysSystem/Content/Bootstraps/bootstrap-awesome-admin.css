@@ -368,27 +368,32 @@ body.sidenav-toggled .navbar-sidenav-tooltip.show {
 }
 
 #awesome-admin.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item > .nav-link {
-    color: #212529;
+    text-shadow: 1px 1px 0px #6600ff, 0 0 1em #6600ff, 0 0 0.9em #6600ff;
+    color: #d9d9d9 /*#212529*/ !important;
 }
 
     #awesome-admin.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item > .nav-link:hover {
+        text-shadow: 1px 1px 2px #000000, 0 0 1em #000000, 0 0 0.2em #000000;
         color: #28a745 !important;
         background-color: #212529 !important;
     }
 
 #awesome-admin.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item .sidenav-second-level > li > a,
 #awesome-admin.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item .sidenav-third-level > li > a {
-    color: #212529;
+    text-shadow: 1px 1px 2px #000000, 0 0 1em #000000, 0 0 0.2em #000000;
+    color: #212529 !important;
 }
 
     #awesome-admin.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item .sidenav-second-level > li > a:focus, #awesome-admin.navbar-dark .navbar-collapse .navbar -sidenav > .nav-item .sidenav-second-level > li > a:hover,
     #awesome-admin.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item .sidenav-third-level > li > a:focus,
     #awesome-admin.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item .sidenav-third-level > li > a:hover {
-        color: #adb5bd;
+        text-shadow: 1px 1px 2px #000000, 0 0 1em #000000, 0 0 0.2em #000000;
+        color: #adb5bd !important;
     }
 
 #awesome-admin.navbar-dark .navbar-collapse .navbar-nav > .nav-item.dropdown > .nav-link:after {
-    color: #adb5bd;
+    text-shadow: 1px 1px 2px #000000, 0 0 1em #000000, 0 0 0.2em #000000;
+    color: #adb5bd !important;
 }
 
 @media (min-width: 992px) {
@@ -399,66 +404,21 @@ body.sidenav-toggled .navbar-sidenav-tooltip.show {
     }
 
         #awesome-admin.navbar-dark .navbar-collapse .navbar-sidenav li.active a {
+            text-shadow: 1px 1px 2px #000000, 0 0 1em #000000, 0 0 0.2em #000000;
             color: #28a745 !important;
             background-color: #212529 !important;
         }
 
             #awesome-admin.navbar-dark .navbar-collapse .navbar-sidenav li.active a:focus, #awesome-admin.navbar-dark .navbar-collapse .navbar-sidenav li.active a:hover {
+                text-shadow: 1px 1px 2px #000000, 0 0 1em #000000, 0 0 0.2em #000000;
                 color: #28a745 !important;
                 background-color: #212529 !important;
             }
 
         #awesome-admin.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item .sidenav-second-level,
         #awesome-admin.navbar-dark .navbar-collapse .navbar-sidenav > .nav-item .sidenav-third-level {
+            text-shadow: 1px 1px 2px #000000, 0 0 1em #000000, 0 0 0.2em #000000;
             background-color: #0062cc !important;
             border-right: 5px solid #212529;
-        }
-}
-
-#awesome-admin.navbar-light .navbar-collapse .navbar-sidenav .nav-link-collapse:after {
-    color: rgba(0, 0, 0, 0.5);
-}
-
-#awesome-admin.navbar-light .navbar-collapse .navbar-sidenav > .nav-item > .nav-link {
-    color: rgba(0, 0, 0, 0.5);
-}
-
-    #awesome-admin.navbar-light .navbar-collapse .navbar-sidenav > .nav-item > .nav-link:hover {
-        color: rgba(0, 0, 0, 0.7);
-    }
-
-#awesome-admin.navbar-light .navbar-collapse .navbar-sidenav > .nav-item .sidenav-second-level > li > a,
-#awesome-admin.navbar-light .navbar-collapse .navbar-sidenav > .nav-item .sidenav-third-level > li > a {
-    color: rgba(0, 0, 0, 0.5);
-}
-
-    #awesome-admin.navbar-light .navbar-collapse .navbar-sidenav > .nav-item .sidenav-second-level > li > a:focus, #awesome-admin.navbar-light .navbar-collapse .navbar-sidenav > .nav-item .sidenav-second-level > li > a:hover,
-    #awesome-admin.navbar-light .navbar-collapse .navbar-sidenav > .nav-item .sidenav-third-level > li > a:focus,
-    #awesome-admin.navbar-light .navbar-collapse .navbar-sidenav > .nav-item .sidenav-third-level > li > a:hover {
-        color: rgba(0, 0, 0, 0.7);
-    }
-
-#awesome-admin.navbar-light .navbar-collapse .navbar-nav > .nav-item.dropdown > .nav-link:after {
-    color: rgba(0, 0, 0, 0.5);
-}
-
-@media (min-width: 992px) {
-    #awesome-admin.navbar-light .navbar-collapse .navbar-sidenav {
-        background: #f8f9fa;
-    }
-
-        #awesome-admin.navbar-light .navbar-collapse .navbar-sidenav li.active a {
-            color: #28a745 !important;
-            background-color: #212529 !important;
-        }
-
-            #awesome-admin.navbar-light .navbar-collapse .navbar-sidenav li.active a:focus, #awesome-admin.navbar-light .navbar-collapse .navbar-sidenav li.active a:hover {
-                color: #28a745 !important;
-                background-color: #212529 !important;
-            }
-
-        #awesome-admin.navbar-light .navbar-collapse .navbar-sidenav > .nav-item .sidenav-second-level,
-        #awesome-admin.navbar-light .navbar-collapse .navbar-sidenav > .nav-item .sidenav-third-level {
-            background: #f8f9fa;
         }
 }

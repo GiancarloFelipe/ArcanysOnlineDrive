@@ -52,7 +52,7 @@ namespace ArcanysSystem
             bundles.Add(new StyleBundle("~/Content/dragndropcss").Include(
                 "~/Scripts/DragNDrop/dragndrop.css"));
 
-            BundleTable.EnableOptimizations = true;
+            //BundleTable.EnableOptimizations = true;
         }
     }
 }
